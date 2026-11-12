@@ -11,6 +11,24 @@
   <meta name="description" content="Hamid Heydari — Data Scientist specialising in applied machine learning, NLP, generative AI and analytics systems.">
   <title>Hamid Heydari | Data Scientist</title>
   <link rel="stylesheet" href="assets/css/portfolio.css">
+  <style>
+    .featured-project { padding-block: 24px 64px; }
+    .featured-project .glass-card { background: linear-gradient(125deg, rgba(32,199,183,.09), rgba(155,134,255,.08)), var(--surface-strong); }
+    .featured-project h2 { margin-bottom: 16px; }
+    .project-lead { max-width: 800px; color: var(--muted); font-size: 1.05rem; }
+    .audience-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin-block: 28px; }
+    .audience-grid article { padding-left: 20px; border-left: 2px solid var(--teal); }
+    .audience-grid article:last-child { border-left-color: var(--violet); }
+    .audience-grid h3 { margin-bottom: 8px; }
+    .audience-grid p, .project-note { color: var(--muted); }
+    .audience-grid p { margin-bottom: 0; }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0; list-style: none; }
+    .project-stack li { padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; font-size: .8rem; color: var(--cyan); }
+    .project-note { margin: 22px 0 0; font-size: .82rem; max-width: 850px; }
+    .hero-signal .text-link { display: inline-block; margin-top: 16px; }
+    .experience-period { color: var(--cyan); }
+    @media (max-width: 700px) { .audience-grid { grid-template-columns: 1fr; gap: 22px; } }
+  </style>
 </head>
 <body>
   <div class="site-shell">
@@ -35,15 +53,42 @@
           <h1>Turning complex data into traceable, production-ready systems.</h1>
           <p class="hero-intro">I am a commercial data scientist with experience spanning sales, ERP implementation, business analytics and machine-learning pipelines. I combine an MSc in Data Science with a systems-optimisation background to solve complex data and business-performance challenges.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#portfolio">Explore my work</a>
+            <a class="button primary" href="#featured-project">Explore my latest project</a>
             <a class="button secondary" href="https://linkedin.com/in/hamid-r-heydari">Connect on LinkedIn</a>
           </div>
         </div>
         <aside class="hero-signal" aria-label="Current professional focus">
           <span class="signal-dot" aria-hidden="true"></span>
           <p>Current focus</p>
-          <strong>Regulatory NLP, hybrid retrieval and traceable AI systems</strong>
+          <strong>Applied NLP, review intelligence and interactive decision-support tools</strong>
+          <a class="text-link" href="#featured-project">Hospitality Review Intelligence →</a>
         </aside>
+      </section>
+
+      <section id="featured-project" class="featured-project section-shell" aria-labelledby="review-project-title">
+        <div class="glass-card">
+          <p class="eyebrow">Featured independent project · Applied NLP</p>
+          <h2 id="review-project-title">Hospitality Review Intelligence</h2>
+          <p class="project-lead">Separate the hotel stay from the dining experience. An interactive review-analysis prototype that uses DeBERTa-v3 to analyse Google Travel and TripAdvisor feedback about hotel services and restaurant experiences.</p>
+          <div class="audience-grid">
+            <article>
+              <h3>For managers</h3>
+              <p>Compare hotel and dining sentiment, explore monthly trends and review summaries, and investigate recurring service themes. Filter by date, platform and rating, with optional duplicate exclusion and credibility weighting.</p>
+            </article>
+            <article>
+              <h3>For guests</h3>
+              <p>Adjust the balance between room comfort, sleep and check-in versus restaurant and breakfast experiences to explore a personalised, review-based match score. Browse supporting reviews by traveller type.</p>
+            </article>
+          </div>
+          <ul class="project-stack" aria-label="Project technologies">
+            <li>Python</li><li>DeBERTa-v3 · ABSA</li><li>Transformers</li><li>Streamlit</li><li>Plotly</li><li>SQLite</li><li>Playwright</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button primary" href="https://comment-reviews-demo.onrender.com/">Try the interactive demo</a>
+            <a class="button secondary" href="https://github.com/hamid5771/Comment-Reviews">View source on GitHub</a>
+          </div>
+          <p class="project-note">The demo uses a fixed dataset with precomputed sentiment scores. Match scores reflect review sentiment and selected preferences; credibility weights are heuristic. Service themes are grouped by keywords. An independent project, not commissioned or endorsed by Premier Inn.</p>
+        </div>
       </section>
 
       <section id="experience" class="content-section section-shell">
@@ -54,7 +99,7 @@
         </div>
 
         <div class="career-panel">
-          <div class="career-flow" role="img" aria-label="Career timeline: Sales Manager at Matin Real Estate beginning 2016; Project Manager at POOYESH GHODRAT beginning 2019; Business Data Analyst at Banian Tolid beginning 2020; ERP Implementation Specialist at System Group beginning 2023; Data Scientist at TiiQu beginning 2026.">
+          <div class="career-flow" role="img" aria-label="Career timeline: Sales Manager at Matin Real Estate beginning 2016; Project Manager at POOYESH GHODRAT beginning 2019; Business Data Analyst at Banian Tolid beginning 2020; ERP Implementation Specialist at System Group beginning 2023; Data Scientist at TiiQu from April to October 2026.">
             <svg class="career-wave" viewBox="0 0 1000 410" preserveAspectRatio="none" aria-hidden="true">
               <path d="M55 205 C120 143 175 143 245 205 S370 267 445 205 S575 143 645 205 S770 267 835 205 S920 143 965 205"></path>
             </svg>
@@ -91,7 +136,7 @@
         </div>
 
         <div class="skills-panel">
-          <div class="word-cloud" role="img" aria-label="Skills including Python, SQL Server, Power BI, NLP, LLMs, Tableau, MongoDB, Pandas, PyTorch and LangChain.">
+          <div class="word-cloud" role="group" aria-label="Data science, analytics and engineering skills">
             <span class="skill small systems">Migration</span>
             <span class="skill large analytics-color">Power BI</span>
             <span class="skill medium ai-color">PyTorch</span>
@@ -118,6 +163,12 @@
             <span class="skill small neutral">Systems</span>
             <span class="skill medium ai-color">Verification</span>
             <span class="skill small systems">Traceable</span>
+            <span class="skill large analytics-color">Streamlit</span>
+            <span class="skill medium analytics-color">Plotly</span>
+            <span class="skill medium systems">SQLite</span>
+            <span class="skill medium ai-color">Transformers</span>
+            <span class="skill medium ai-color">DeBERTa-v3</span>
+            <span class="skill medium ai-color">ABSA</span>
           </div>
           <div class="skill-legend" aria-label="Skill categories">
             <span><i class="analytics-key"></i>Analytics &amp; visualisation</span>
@@ -129,9 +180,10 @@
 
       <section class="split-section section-shell">
         <article class="glass-card feature-card">
-          <p class="eyebrow">Current work</p>
+          <p class="eyebrow">Previous work · TiiQu</p>
           <h2>Semantic NLP &amp; systems engineering</h2>
-          <p>My current initiatives focus on production-grade semantic NLP pipelines within regulatory compliance frameworks. I transform unstructured legislative text into deterministic semantic units and vector embeddings for traceable analytics and claim-verification workflows.</p>
+          <p class="experience-period">Data Scientist · April–October 2026</p>
+          <p>At TiiQu, I worked on semantic NLP pipelines for regulatory compliance, transforming unstructured legislative text into semantic units and vector embeddings. My work included hybrid retrieval combining dense vector search with BM25 keyword matching, and benchmarking variable-extraction approaches for traceable claim-verification workflows.</p>
         </article>
         <article class="glass-card feature-card">
           <p class="eyebrow">Academic foundation</p>
